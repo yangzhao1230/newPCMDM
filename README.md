@@ -32,10 +32,13 @@ We provide the pretrained models here: [pretrained models](https://drive.google.
 ## Running the code
 You can use the following three commands to obtain the results for the last three rows of the experimental results table in our paper:
 ```
+# No special sampling
 python eval.py --model_path ./save/pcmdm/model000600000.pt --guidance_param 2 --inpainting_frames 0
 
+# Past inpainting sampling
 python eval.py --model_path ./save/pcmdm/model000600000.pt --guidance_param 2 --inpainting_frames 2
 
+# Compositional transition sampling
 python eval.py --model_path ./save/pcmdm/model000600000.pt --guidance_param 2 --composition True --inter_frames 2
 ```
 
