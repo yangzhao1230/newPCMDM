@@ -32,16 +32,16 @@ We provide the pretrained models here: [pretrained models](https://drive.google.
 ## Running the code
 You can use the following three commands to obtain the results for the last three rows of the experimental results table in our paper:
 ```
-python eval_humanml.py --model_path ./save/past_cond_hist_frame_5_mask_newdata/model000600000.pt --guidance_param 2 --inpainting_frames 0
+python eval.py --model_path ./save/pcmdm/model000600000.pt --guidance_param 2 --inpainting_frames 0
 
-python eval_humanml.py --model_path ./save/past_cond_hist_frame_5_mask_newdata/model000600000.pt --guidance_param 2 --inpainting_frames 2
+python eval.py --model_path ./save/pcmdm/model000600000.pt --guidance_param 2 --inpainting_frames 2
 
-python eval_humanml.py --model_path ./save/past_cond_hist_frame_5_mask_newdata/model000600000.pt --guidance_param 2 --composition True --inter_frames 2
+python eval.py --model_path ./save/pcmdm/model000600000.pt --guidance_param 2 --composition True --inter_frames 2
 ```
 
 Besides, if you want to train a model from scratch, you can use this comman:
 ```
-python train_mdm.py --save_dir ./save/pcmdm --dataset babel --hist_frames 5 
+python train_diffusion.py --save_dir ./save/pcmdm --dataset babel --hist_frames 5 
 ```
 
 ## Acknowledgments
