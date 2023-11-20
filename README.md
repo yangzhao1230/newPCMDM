@@ -27,7 +27,7 @@ data
 Besides, you should download the folder `deps` in [TEACH](https://github.com/athn-nik/teach/tree/main/deps) to this project.
 
 ## Pre-trained weights
-We provide the pretrained models here: [pretrained models link](https://drive.google.com/drive/folders/1Lrj5FEt7bFFiv_VnfoDFoQgZzfF4X6RJ?usp=sharing). The 'pretrained.zip' file contains the pretrained model and training configurations used to report metrics in our paper, while 'MotionCLIP.zip' contains the model used for evaluation.
+We provide the pretrained models here: [pretrained models](https://drive.google.com/drive/folders/1Lrj5FEt7bFFiv_VnfoDFoQgZzfF4X6RJ?usp=sharing). The 'pretrained.zip' file contains the pretrained model and training configurations used to report metrics in our paper, while 'MotionCLIP.zip' contains the model used for evaluation. You can put the pretrained model and training configuration file under `./save/pcmdm` and put the `MotipnClip.ckpt` under `./motionclip_save`.
 
 ## Running the code
 You can use the following three commands to obtain the results for the last three rows of the experimental results table in our paper:
@@ -39,7 +39,7 @@ python eval_humanml.py --model_path ./save/past_cond_hist_frame_5_mask_newdata/m
 python eval_humanml.py --model_path ./save/past_cond_hist_frame_5_mask_newdata/model000600000.pt --guidance_param 2 --composition True --inter_frames 2
 ```
 
-Besides, if you want to train a model from scratchm, you can use this comman:
+Besides, if you want to train a model from scratch, you can use this comman:
 ```
 python train_mdm.py --save_dir ./save/pcmdm --dataset babel --hist_frames 5 
 ```
